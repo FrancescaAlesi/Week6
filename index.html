@@ -8,8 +8,8 @@
     </head>
     
     <body>
-        <header class="d-flex flex-column bg-primary text-light text-center">
-            <nav class="navbar navbar-expand-lg bg-primary">
+        <header class="d-flex flex-column bg-primary text-light">
+            <nav class="navbar navbar-expand-md bg-primary">
                 <div class="container-fluid">
                     <a class="h1 fs-3 m-0 navbar-brand text-white" href="#">EpiShop</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
@@ -33,17 +33,17 @@
         </header>
 
         <section class="bg-primary py-5">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                 <div class="carousel-inner text-center">
-                    <div class="carousel-item bg-primary active">
+                    <div class="carousel-item bg-primary pt-3 pb-3 active">
                         <h2 class="fs-1 text-white fw-bold md-3">Saldi di primavera</h2>
                         <p class="fs-5 text-white mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto.</p>
                     </div>
-                    <div class="carousel-item bg-success">
+                    <div class="carousel-item bg-success pt-3 pb-3">
                         <h2 class="fs-1 text-white fw-bold md-3">Nuova collezione</h2>
                         <p class="fs-5 text-white mb-4">Scopri gli arrivi della settimana.</p>
                     </div>
-                    <div class="carousel-item bg-dark">
+                    <div class="carousel-item bg-dark pt-3 pb-3">
                         <h2 class="fs-1 text-white fw-bold md-3">Spedizione gratuita</h2>
                         <p class="fs-5 text-white mb-4">Sopra i 50€ su tutto il sito.</p>
                     </div>
@@ -77,62 +77,111 @@
                     
                     <div class="row">
                         <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark fs-5 fw-bold">Sneaker Run</h5>
                                     <p class="card-text">Scarpa leggera per la corsa, suola di gomma traspirante.</p>
                                     <p class="text-dark fs-5 fw-bold m-0 pb-3">€89,00</p>
                                     <div class="d-grid gap-2">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
                                             Dettagli
-                                        </button>
+                                        </button> 
+                    
+                                        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="modal1Label">Sneaker Run</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
+                                                        <hr/>
+                                                        <p class="text-darkb card-text">Scarpa leggera per la corsa, suola di gomma traspirante. Disponibili dal 36 al 46.</p>
+                                                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€89,00</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> 
                             </div>
                         </article>
 
                         <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark fs-5 fw-bold">T-shirt basic</h5>
                                     <p class="card-text">Cotone biologico, taglio regolare, disponibile i 5 colori.</p>
                                     <p class="text-dark fs-5 fw-bold m-0 pb-3">€19,00</p>
                                     <div class="d-grid gap-2">
-                                        <a href="#" class="btn btn-primary">Dettagli</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+                                            Dettagli
+                                        </button>
+
+                                        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="modal2Label">T-shirt basic</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
+                                                        <hr/>
+                                                        <p class="text-darkb card-text">Cotone biologico, taglio regolare, disponibile i 5 colori.</p>
+                                                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€19,00</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
                                     </div>
                                 </div>
                             </div>
                         </article>
 
                         <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark fs-5 fw-bold">Borsa city</h5>
                                     <p class="card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
                                     <p class="text-dark fs-5 fw-bold m-0 pb-3">€49,00</p>
                                     <div class="d-grid gap-2">
-                                        <a href="#" class="btn btn-primary">Dettagli</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                                            Dettagli
+                                        </button>
+
+                                        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="modal3Label">Borsa city</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="assets/img/W6D2.png" class="card-img-top" alt="...">
+                                                        <hr/>
+                                                        <p class="text-darkb card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
+                                                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€49,00</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -141,49 +190,48 @@
                 </section>
             </div>
 
-            <h2 class="title text-center">Domande frequenti</h2>
-            <hr />
-            <div class="accordion accordion-flush" id="#accordionExample">
+            <h2 class="title text-center pt-5">Domande frequenti</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             Come posso effettuare un ordine?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">Seleziona i prodotti che desideri, aggiungili al carrello e segui la procedura di checkout. Accettiamo pagamenti con carta di credito, PayPal e bonifico bancario.</div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             Quali sono i tempi di consegna?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">La consegna standard richiede 3-5 giorni lavorativi. Con la spedizione express ricevi il tuo ordine entro 24-48 ore. Per ordini superiori a € 50 la spedizione è gratuita.</div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                             Posso restituire un prodotto?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">Sì, accettiamo resi entro 30 giorni dall'acquisto. Il prodotto deve essere integro, non utilizzato e nella confezione originale. Le spese di reso sono a carico del cliente salvo difetti di produzione.</div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                             Come posso contattare il servizio clienti?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">Puoi raggiungerci via email all'indirizzo supporto@epishop.it oppure tramite il modulo di contatto sul sito. Siamo disponibili dal lunedì al venerdì, dalle 9:00 alle 18:00.</div>
                     </div>
                 </div>
@@ -195,6 +243,7 @@
                 <p class="m-0">&copy; 2026 EpiShop - tutti i diritti riservati</p>
             </div>
         </footer>
-
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     </body>
 </html>
