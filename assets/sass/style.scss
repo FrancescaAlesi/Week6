@@ -1,0 +1,102 @@
+@use "variables" as v;
+
+@mixin solo-su($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
+  background-color: $bg;
+  color: $testo;
+  .card {
+    background-color: $card-bg;
+    border-color: $bordo;
+    .card-title {
+      color: $testo;
+    }
+    .card-text {
+      color: $muted;
+    }
+  }
+  .card-footer {
+    background-color: $card-bg;
+  }
+  aside .bg-light {
+    background-color: $card-bg !important;
+    border-color: $bordo;
+    color: $testo;
+  }
+  .modal-content {
+    background-color: $card-bg;
+    color: $testo;
+  }
+  .accordion-item {
+    background-color: $card-bg !important;
+    border-color: $bordo !important;
+    color: $testo !important;
+  }
+  .accordion-button {
+    background-color: $card-bg !important;
+    color: $testo !important;
+    border-bottom: 1px solid $bordo;
+    &:not(.collapsed) {
+      background-color: darken($card-bg, 4%) !important;
+      color: $testo !important;
+      box-shadow: inset 0 -1px 0 $bordo;
+    }
+    &::after {
+      filter: if($bg == #121212, invert(1) grayscale(100%), none);
+    }
+  }
+  .accordion-body {
+    background-color: $card-bg !important;
+    color: $muted !important;
+  }
+}
+
+body {
+  @include tema(
+    $bg: #fafafa,
+    $testo: #1a1a1a,
+    $card-bg: #ffffff,
+    $bordo: #e0e0e0,
+    $muted: #6c757d
+  );
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+  &.dark {
+    @include tema(
+      $bg: #121212,
+      $testo: #f8f9fa,
+      $card-bg: #1e1e1e,
+      $bordo: #2d2d2d,
+      $muted: #adb5bd
+    );
+    .navbar {
+      background-color: v.$brand-primary-dark !important;
+    }
+    .text-dark 
+    .text-darkb,
+    .card-title,
+    .card-body p.fw-bold {
+      color: #f8f9fa !important;
+    }
+  }
+}
+
+.card {
+  border-radius: v.$radius-base;
+  box-shadow: v.$shadow-card;
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  @include solo-su(768px) {
+    padding: 24px;
+  }
+  &:hover {
+    box-shadow: v.$shadow-card-hover;
+    transform: translateY(-3px);
+  }
+}
