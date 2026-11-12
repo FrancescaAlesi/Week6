@@ -98,10 +98,10 @@ body.dark .accordion-body {
   color: #adb5bd !important;
 }
 body.dark .navbar {
-  background-color: rgb(0.6091288975%, 30.1518804243%, 73.7045965927%) !important;
+  background-color: hsl(150, 60%, 15%) !important;
 }
-body.dark .text-dark .text-darkb,
-body.dark .card-title,
+body.dark .text-dark,
+body.dark .text-darkb,
 body.dark .card-body p.fw-bold {
   color: #f8f9fa !important;
 }
@@ -119,6 +119,59 @@ body.dark .card-body p.fw-bold {
 .card:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(-3px);
+}
+.card.scarpe {
+  border-top: 4px solid hsl(220, 60%, 40%) !important;
+}
+.card.scarpe .card-title {
+  color: hsl(220, 60%, 40%) !important;
+}
+.card.scarpe:hover {
+  box-shadow: 0 6px 18px rgba(16%, 32%, 64%, 0.3);
+}
+.card.abbigliamento {
+  border-top: 4px solid hsl(0, 70%, 50%) !important;
+}
+.card.abbigliamento .card-title {
+  color: hsl(0, 70%, 50%) !important;
+}
+.card.abbigliamento:hover {
+  box-shadow: 0 6px 18px rgba(85%, 15%, 15%, 0.3);
+}
+.card.accessori {
+  border-top: 4px solid hsl(45, 90%, 50%) !important;
+}
+.card.accessori .card-title {
+  color: hsl(45, 90%, 50%) !important;
+}
+.card.accessori:hover {
+  box-shadow: 0 6px 18px rgba(95%, 72.5%, 5%, 0.3);
+}
+
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: hsl(150, 60%, 30%) !important;
+  border-color: hsl(150, 60%, 30%) !important;
+}
+
+.text-primary {
+  color: hsl(150, 60%, 30%) !important;
+}
+
+.btn-primary:hover {
+  background-color: hsl(150, 60%, 20%) !important;
+}
+
+.btn-outline-primary {
+  border-color: hsl(150, 60%, 30%);
+  color: hsl(150, 60%, 30%);
+  background-color: transparent;
+}
+.btn-outline-primary:hover, .btn-outline-primary.active {
+  background-color: hsl(150, 60%, 30%);
+  border-color: hsl(150, 60%, 30%);
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

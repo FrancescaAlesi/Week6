@@ -55,6 +55,16 @@
   }
 }
 
+@mixin card-prodotto($accent) {
+  border-top: 4px solid $accent !important;
+  .card-title {
+    color: $accent !important;
+  }
+  &:hover {
+    box-shadow: 0 6px 18px rgba($accent, 0.3);
+  }
+}
+
 body {
   @include tema(
     $bg: #fafafa,
@@ -77,9 +87,8 @@ body {
     .navbar {
       background-color: v.$brand-primary-dark !important;
     }
-    .text-dark 
+    .text-dark, 
     .text-darkb,
-    .card-title,
     .card-body p.fw-bold {
       color: #f8f9fa !important;
     }
@@ -98,5 +107,41 @@ body {
   &:hover {
     box-shadow: v.$shadow-card-hover;
     transform: translateY(-3px);
+  }
+  &.scarpe {
+    @include card-prodotto(hsl(220, 60%, 40%));
+  }
+  &.abbigliamento {
+    @include card-prodotto(hsl(0, 70%, 50%));
+  }
+  &.accessori {
+    @include card-prodotto(hsl(45, 90%, 50%));
+  }
+}
+
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: v.$brand-primary !important;
+  border-color: v.$brand-primary !important;
+}
+
+.text-primary {
+  color: v.$brand-primary !important;
+}
+
+.btn-primary:hover {
+  background-color: darken(v.$brand-primary, 10%) !important;
+}
+
+.btn-outline-primary {
+  border-color: v.$brand-primary;
+  color: v.$brand-primary;
+  background-color: transparent;
+  &:hover,
+  &.active {
+    background-color: v.$brand-primary;
+    border-color: v.$brand-primary;
+    color: #ffffff;
   }
 }

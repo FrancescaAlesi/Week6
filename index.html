@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EpiShop — E-commerce</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     
@@ -19,7 +19,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
 							<li class="nav-item">
-                                <a class="nav-link active text-white" aria-current="page" href="#">Prodotti</a>
+                                <a class="nav-link active text-white" aria-current="page" href="#prodotti">Prodotti</a>
                             </li>
 							<li class="nav-item">
                                 <a class="nav-link text-white" href="#">Offerte</a>
@@ -67,69 +67,26 @@
                 Spedizione gratis sopra i 50 €.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+
             <div class="row">
                 <aside class="col-lg-3 d-none d-lg-block">
                     <div class="bg-light p-3 rounded border">
                         <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
                         <p class="m-0 mb-2">Scarpe</p>
-                        <p class="m-0 mb-2">T-shirt</p>
-                        <p class="m-0 mb-2">Borse</p>
+                        <p class="m-0 mb-2">Abbigliamento</p>
                         <p class="m-0 mb-2">Accessori</p>
                     </div>
                 </aside>
 
                 <section class="col-12 col-lg-9">
-                    <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza <span class="badge bg-danger fs-6">-30%</span></h2>
-                    
-                    <div class="row">
-                        <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card">
-                               <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-5 fw-bold">Sneaker Run</h5>
-                                    <p class="card-text">Scarpa leggera per la corsa, suola di gomma traspirante.</p>
-                                    <p class="fs-5 fw-bold m-0 pb-3">€89,00</p>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
-                                        Dettagli
-                                    </button> 
-                                </div> 
-                            </div>
-                        </article>
-
-                        <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card">
-                                <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-5 fw-bold">T-shirt basic</h5>
-                                    <p class="card-text">Cotone biologico, taglio regolare, disponibile i 5 colori.</p>
-                                    <p class="fs-5 fw-bold m-0 pb-3">€19,00</p>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
-                                        Dettagli
-                                    </button> 
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-12 col-sm-6 col-xl-4 mb-3">
-                            <div class="card">
-                                <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-5 fw-bold">Borsa city</h5>
-                                    <p class="card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
-                                    <p class="fs-5 fw-bold m-0 pb-3">€49,00</p>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
-                                         Dettagli
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
+                    <h2 id="prodotti" class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza <span class="badge bg-danger fs-6">-30%</span></h2>
+                    <div id="filtri" class="mb-4">
+                        <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
+                        <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
+                        <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="abbigliamento">Abbigliamento</button>
+                        <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
                     </div>
+                    <div id="contenitore-prodotti" class="row"></div>
                 </section>
             </div>
 
@@ -181,72 +138,6 @@
             </div>
         </main>
 
-        <!--Modale1-->
-        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modal1Label">Sneaker Run</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="">
-                        <hr/>
-                        <p class="text-darkb card-text">Scarpa leggera per la corsa, suola di gomma traspirante. Disponibili dal 36 al 46.</p>
-                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€89,00</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Modale2-->
-        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modal2Label">T-shirt basic</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="">
-                        <hr/>
-                        <p class="text-darkb card-text">Cotone biologico, taglio regolare, disponibile i 5 colori.</p>
-                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€19,00</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <!--Modale3-->
-        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modal3Label">Borsa city</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="">
-                        <hr/>
-                        <p class="text-darkb card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
-                        <p class="text-dark fs-5 fw-bold m-0 pb-3">€49,00</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                        <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
         <!--Footer-->
         <footer class="bg-dark text-white py-4 mt-5">
             <div class="container text-center">
@@ -254,7 +145,7 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.min.js" integrity="sha384-89aa4glufciPv46aKltztWQEmk+Tu9W2RhzXr6VcnUUEub7F8+06RcL2RYLCOHUq" crossorigin="anonymous"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
